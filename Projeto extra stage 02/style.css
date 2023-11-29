@@ -62,16 +62,13 @@ span {
   margin-left: 42px;
 }
 
-#onda {
-  text-align: center;
-  position: absolut;
-  margin-top: 10px;
-  margin-bottom: 0%;
-}
+
 
 #onda img {
-  width: 100%;
+  width: 100vw;
   margin-top: 55px;
+  position: static;
+  margin-botton: 0px
 }
 
 #texto1 {
