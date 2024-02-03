@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #efefef;
+}
+
+.page {
+  width: 750px;
+  margin: auto;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background: #535971;
+  height: 436px;
+  top: 0;
+  left: 0;
+}
+
+header {
+  width: 350px;
+  margin-top: 140px;
+}
+
+header h1 {
+  font-family: "Staatliches", sans-serif;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 400;
+}
+
+header p {
+  margin-top: 18px;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+form {
+  margin-top: 64px;
+  background: #ffffff;
+  border-radius: 8px 8px 0 0;
+  min-height: 300px;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+fieldset {
+  border: none;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+fieldset legend {
+  color: #535971;
+  font-family: "Staatliches", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  border-bottom: 1px solid #e6e6f0;
+  padding-bottom: 16px;
+  margin-bottom: 36px;
+}
+
+#nome-sobrenome {
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+}
+
+#nome-sobrenome input {
+  width: 300px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-wrapper input {
+  border-radius: 8px;
+  border: 1px solid var(--Back-Lines-in-white, #e6e6f0);
+  background: var(--Shapes-02, #fafafc);
+  height: 56px;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+
+.input-wrapper label {
+  color: #4e4958;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.input-wrapper label span {
+  color: #c1bccc;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-left: 8px;
+}
+
+h1 {
+  color: #535971;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34px;
+  font-family: "Staatliches", sans-serif;
+}
+
+div .org {
+  display: flex;
+  flex-direction: row;
+}
+
+#event-date {
+  width: 300px;
+  margin-right: 32px;
+}
+
+#event-begin {
+  margin-right: 10px;
+}
+
+footer {
+  background: #535971;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  padding: 52px 71px;
+  margin-bottom: 100px;
+
+  border-top: 1px solid #d6d6d6;
+  border-radius: 0 0 20px 20px;
+}
+
+footer .button {
+  height: 56px;
+  border-radius: 8px;
+  border: 0;
+  background: #ff5374;
+  color: #fff;
+  font-family: "Staatliches", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+footer .button:hover {
+  background: #c7415c;
+  border: 1px solid #ff5374;
+}
+
+input:required:invalid:focus {
+  outline: none; /* Remova a borda de foco padrão, se desejar */
+  box-shadow: 0 0 5px red; /* Adicione um sombreamento vermelho para indicar o foco */
+}
