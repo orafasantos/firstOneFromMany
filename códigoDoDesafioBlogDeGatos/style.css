@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  --header-primary: hsl(195, 91%, 25%);
+  --input-footer: hsl(195, 46%, 40%);
+  --input-fill: hsl(0, 0%, 20%);
+  --main-text-color: hsl(240, 5%, 7%);
+  --main-title-color: hsl(240, 6%, 13%);
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+body,
+input {
+  font-family: "Mulish", sans-serif;
+}
+
+header {
+  background-color: var(--header-primary);
+  justify-content: center;
+  grid-area: header;
+}
+
+.app {
+  max-width: 45rem;
+}
+
+a {
+  line-height: 0;
+  font-size: 1.6rem;
+  all: unset;
+}
+
+header input {
+  background-color: var(--input-fill);
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  outline: none;
+
+  background: hsla(0, 0%, 100%, 0.2);
+  box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.25);
+  color: white;
+  font-size: 1.6rem;
+}
+
+header input:hover {
+  background-color: hsl(0, 0%, 20%);
+}
+
+header input::placeholder,
+footer {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+}
+
+.container {
+  background-color: var(--header-primary);
+  min-width: 43rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+  padding-inline: 2.4rem;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+
+.container img {
+  border-radius: 50%;
+  width: 3.8rem;
+  height: 3.8rem;
+  box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.25);
+  transition: all 300ms;
+}
+
+.container img:hover {
+  transform: scale(1.2);
+}
+
+h1 {
+  margin-top: 2.8rem;
+  font-size: 2.4rem;
+  line-height: 160%;
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  line-height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--main-title-color);
+}
+
+p {
+  color: var(--main-text-color);
+}
+
+button {
+  all: unset;
+  transition: all 400ms;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.1) rotate(-10deg);
+  filter: saturate(300%);
+}
+
+main {
+  max-width: 45rem;
+  grid-area: main;
+  margin-inline: auto;
+  padding-inline: 2.2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main p {
+  font-size: 1.6rem;
+  width: 100%;
+  line-height: 160%;
+  margin-top: 2.8rem;
+}
+
+aside {
+  max-width: 45rem;
+  margin-inline: auto;
+  grid-area: aside;
+  padding-inline: 2.2rem;
+
+  margin-top: 3.2rem;
+}
+
+aside section {
+  margin-top: 2.4rem;
+}
+
+section img {
+  max-width: 15rem;
+  border-radius: 0.4rem;
+}
+
+.text-sm {
+  font-size: 1.4rem;
+  line-height: 160%;
+  font-weight: 400;
+}
+
+#gato {
+  border-radius: 0.4rem;
+
+  transition: all 300ms;
+}
+
+#gato:hover {
+  filter: hue-rotate(30deg);
+  transform: scale(1.01);
+}
+
+aside section article {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  gap: 1.6rem;
+}
+
+aside img {
+  transition: all 500ms;
+}
+
+aside img:hover {
+  transform: scale(1.1);
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 100%;
+  margin-bottom: 1.2;
+}
+
+article + article {
+  margin-top: 3.2rem;
+}
+
+footer {
+  min-width: 43rem;
+  min-height: 6.4rem;
+  margin-top: 3.8rem;
+  background-color: var(--input-footer);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: footer;
+}
+
+@media screen and (min-width: 768px) {
+  .aplic {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 11.2rem;
+    flex-wrap: nowrap;
+  }
+
+  .container input {
+    width: 108rem;
+  }
+
+  .app {
+    max-width: 81rem;
+  }
+
+  .buttons {
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  main {
+    display: inline;
+    margin-top: 3rem;
+    max-width: 81rem;
+  }
+
+  button {
+    display: inline;
+    margin-top: 3rem;
+  }
+
+  h1 {
+    display: inline;
+  }
+
+  main {
+    max-width: 81rem;
+    margin: auto;
+    padding-inline: 0;
+  }
+
+  main p {
+    max-width: 81rem;
+    margin-top: 3rem;
+  }
+
+  #gato {
+    margin-top: 4.4rem;
+    width: 80rem;
+  }
+
+  aside {
+    margin-inline: initial;
+    padding-inline: initial;
+    max-width: initial;
+  }
+
+  .aside {
+    max-width: 38.4rem;
+  }
+}
