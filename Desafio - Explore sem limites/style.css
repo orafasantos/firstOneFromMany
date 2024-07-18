@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --header-bg: #f9f4fb;
+  --main-bg: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
+  --main-bg-hover: linear-gradient(96.21deg, #5651dc 0%, #302c63 99.68%);
+  --h1-text-color: #b52184;
+  --small-text-color: #312d64;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+h1,
+h3 {
+  font-weight: 900;
+  font-size: 29.2193px;
+  line-height: 37px;
+  color: var(--h1-text-color);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: var(--small-text-color);
+  margin-bottom: 3.5rem;
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2rem;
+  color: var(--small-text-color);
+}
+
+body {
+  font-family: "Mulish";
+  background-color: var(--header-bg);
+}
+
+header {
+  text-align: center;
+  max-width: 43rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+header img {
+  max-width: 36.4rem;
+  max-height: 37rem;
+  margin-bottom: 1.7rem;
+  grid-area: ihead;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+header button {
+  margin-bottom: 9rem;
+  background-image: url(./assets/Group\ 24.svg);
+  background-size: 5.8rem 10.5rem;
+  background-repeat: no-repeat;
+  width: 5.8rem;
+  height: 10.5rem;
+  border: none;
+  padding: 0;
+  border-radius: 76rem;
+  transition: all 300ms;
+  grid-area: bhead;
+}
+
+.card {
+  width: 35.2rem;
+  height: 35rem;
+
+  background-color: #ffffff;
+  box-shadow: 0px 3.31077px 13.2431px rgba(0, 0, 0, 0.25);
+
+  padding: 2.6rem;
+  display: grid;
+  margin: 0 auto;
+  border-radius: 2rem;
+  transition: all 300ms;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+main {
+  padding: 5.2rem 0rem 5.2rem 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  background-image: var(--main-bg);
+  background-size: cover;
+}
+
+main h1 {
+  margin-top: 4rem;
+  margin-bottom: 1.6rem;
+}
+
+main p {
+  width: 30rem;
+  padding-bottom: 40rem;
+}
+
+.card + .card {
+  margin-top: 5rem;
+}
+
+input,
+textarea {
+  display: flex;
+  flex-direction: row;
+
+  padding: 12px 16px 12px 14px;
+
+  gap: 12px;
+  width: 34.8rem;
+  border: 1.5px solid #312d64;
+  border-radius: 16px;
+  font-family: "Mulish";
+  font-weight: 600;
+  background-color: var(--header-bg);
+}
+
+textarea::placeholder {
+  color: #312d64;
+}
+
+textarea {
+  resize: none;
+}
+
+section {
+  padding-top: 7.8rem;
+  margin: 0 auto;
+  max-width: 43rem;
+  align-items: center;
+  background-color: var(--header-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+section input::placeholder {
+  color: #312d64;
+}
+
+input[type="email"]::placeholder {
+  background-image: url(./assets/at.svg);
+  background-repeat: no-repeat;
+  background-size: 1.8rem;
+  padding-left: 2.4rem;
+  display: flex;
+  justify-content: center;
+}
+
+input:first-of-type::placeholder {
+  background-image: url(./assets/person.svg);
+  background-repeat: no-repeat;
+  background-size: 1.8rem;
+  padding-left: 2.4rem;
+  display: flex;
+  justify-content: center;
+}
+
+textarea {
+  height: 12rem;
+  padding: 1.2rem 1.6rem 1.6rem 1.6rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+footer {
+  height: 7.8rem;
+  background-image: var(--main-bg);
+  display: block;
+  align-items: center;
+  text-align: center;
+  display: flex;
+
+  justify-content: center;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 6.5rem;
+}
+
+header button:hover {
+  cursor: pointer;
+  filter: saturate(150%) hue-rotate(+30deg);
+  background-color: #e7deea;
+  transform: scale(1.05);
+}
+
+.formbutton {
+  background-image: var(--main-bg);
+  background-repeat: no-repeat;
+  width: 15.1rem;
+  height: 4.5rem;
+  border: none;
+  padding: 0;
+  border-radius: 1.6rem;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-self: normal;
+  align-items: center;
+  justify-content: center;
+  font-family: "Mulish";
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.formbutton:hover {
+  background-image: var(--main-bg-hover);
+  transform: scale(1.1);
+  outline: 0.3rem transparent rgb(27, 20, 75);
+}
+
+input:focus,
+textarea:focus {
+  border: 3px solid #312d64;
+  outline: 1.5px solid #312d64;
+}
+
+.text {
+  grid-area: thead;
+}
+
+@media screen and (max-width: 768px) {
+  .vetor {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    display: grid;
+    grid-template-areas:
+      "thead ihead"
+      "thead ihead"
+      "bhead ihead";
+  }
+
+  header {
+    text-align: initial;
+    align-items: initial;
+
+    max-width: initial;
+  }
+
+  header {
+    max-width: 144rem;
+    overflow: hidden;
+  }
+
+  header img {
+    width: initial;
+    height: initial;
+    margin: initial;
+  }
+
+  header img {
+    margin-right: 3rem;
+    max-width: 71.9rem;
+    max-height: 70.2rem;
+  }
+
+  main {
+    overflow: hidden;
+  }
+
+  body {
+    margin: initial;
+    max-width: initial;
+  }
+
+  header {
+    min-height: 83.6rem;
+  }
+
+  header h1 {
+    font-size: 5.8rem;
+    width: 56rem;
+    line-height: 73%;
+  }
+
+  header h2 {
+    margin-top: 2.4rem;
+    font-size: 3.2rem;
+  }
+
+  .button {
+    width: 5.8rem;
+    height: 10.5rem;
+    margin-left: 11rem;
+  }
+
+  .text {
+    margin-top: 31.2rem;
+    margin-left: 11rem;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card + .card {
+    margin-top: initial;
+  }
+
+  .vetor {
+    position: relative;
+    right: 0;
+
+    object-fit: cover;
+
+    max-height: 612px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  section {
+    max-height: 61.2rem;
+    padding-top: initial;
+    max-width: initial;
+    flex-direction: initial;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10.9rem;
+  }
+
+  main {
+    overflow-x: scroll;
+  }
+
+  section h3 {
+    font-size: 4.2rem;
+    line-height: 53px;
+  }
+
+  section input {
+    width: 59.2rem;
+  }
+
+  section textarea {
+    width: 59.2rem;
+  }
+
+  .formbutton {
+    margin-left: 0;
+  }
+
+  footer {
+    margin-top: initial;
+  }
+}
