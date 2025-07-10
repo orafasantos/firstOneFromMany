@@ -1,1 +1,1 @@
-Welcome to my first Portfolio, I'm adding here my inicial projects and challenges, my journey from zero to one.
+Welcome to my first repository, I'm adding here my inicial practicing projects and code challenges, the beggining of my journey from zero to one.
